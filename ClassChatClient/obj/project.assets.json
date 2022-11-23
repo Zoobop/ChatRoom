@@ -1,0 +1,91 @@
+{
+  "version": 3,
+  "targets": {
+    "net6.0": {
+      "ClassChatServer/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/ClassChatServer.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ClassChatServer.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ClassChatServer/1.0.0": {
+      "type": "project",
+      "path": "../ClassChatServer/ClassChatServer.csproj",
+      "msbuildProject": "../ClassChatServer/ClassChatServer.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net6.0": [
+      "ClassChatServer >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\Brandon\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\Brandon\\OneDrive\\Desktop\\Code\\CSharp\\SocketCommunication\\ClassChatClient\\ClassChatClient.csproj",
+      "projectName": "ClassChatClient",
+      "projectPath": "C:\\Users\\Brandon\\OneDrive\\Desktop\\Code\\CSharp\\SocketCommunication\\ClassChatClient\\ClassChatClient.csproj",
+      "packagesPath": "C:\\Users\\Brandon\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Brandon\\OneDrive\\Desktop\\Code\\CSharp\\SocketCommunication\\ClassChatClient\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\Brandon\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net6.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "projectReferences": {
+            "C:\\Users\\Brandon\\OneDrive\\Desktop\\Code\\CSharp\\SocketCommunication\\ClassChatServer\\ClassChatServer.csproj": {
+              "projectPath": "C:\\Users\\Brandon\\OneDrive\\Desktop\\Code\\CSharp\\SocketCommunication\\ClassChatServer\\ClassChatServer.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net6.0": {
+        "targetAlias": "net6.0",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}
