@@ -17,7 +17,7 @@ public sealed class ClassChatServer
     public int Port { get; }
     public IDictionary<TcpClient, User> Clients { get; } = new ConcurrentDictionary<TcpClient, User>();
 
-    private bool _isOnline = false;
+    private volatile bool _isOnline = false;
 
     public ClassChatServer(ClassChatApplication classChat, int port)
     {
@@ -37,18 +37,20 @@ public sealed class ClassChatServer
         
         // Set online status
         _isOnline = true;
+        Console.Clear();
         Console.WriteLine("Initializing Server...");
 
+        ThreadPool.SetMaxThreads(8, 8);
+        ThreadPool.QueueUserWorkItem(GetConnections);
+
         // Construct a thread to manage client connection requests
-        var connectionRequestWorker = new Thread(GetConnections);
         var connectionManagerWorker = new Thread(ManageConnections);
         var applicationWorker = new Thread(Application);
-        connectionRequestWorker.Start();
         connectionManagerWorker.Start();
         applicationWorker.Start();
     }
     
-    private void GetConnections()
+    private void GetConnections(object? arg)
     {
         _listener.Start();
         
@@ -77,7 +79,7 @@ public sealed class ClassChatServer
         {
             // Reduce manage interval
             Thread.Sleep(1000);
-            
+
             // Refresh active clients
             foreach (var (client, user) in Clients)
             {

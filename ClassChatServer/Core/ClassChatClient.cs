@@ -6,7 +6,7 @@ using ClassChatAPI.Utility;
 
 namespace ClassChatAPI.Core;
 
-public sealed class ClassChatClient : IDisposable
+public sealed class ClassChatClient
 {
     private readonly int _port;
     private readonly TcpClient _client;
@@ -64,7 +64,7 @@ public sealed class ClassChatClient : IDisposable
                     // User prompt
                     var groupTag = string.IsNullOrEmpty(_group) ? _group : $"{_group}@";
                     Console.Write($"{groupTag}{username}: ");
-                    
+
                     // WRITE TO SERVER
                     // Client command input
                     var groupHandle = string.IsNullOrEmpty(_group) ? _group : $"G@{_group}:";
@@ -223,11 +223,5 @@ public sealed class ClassChatClient : IDisposable
         
         cancelStallWorker.Start();
         while (!stream.DataAvailable && isCancelled) {}
-    }
-
-    public void Dispose()
-    {
-        _client.Dispose();
-        _client.Close();
     }
 }

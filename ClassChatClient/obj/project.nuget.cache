@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "zACTh2S5Dv7UnWvojbMmahRR+Fis+IfvQivF36rA1zeVUMCVAqJ5FYBYCnDlut7r2Ctoj19A3OP4Z7LGD4cpkg==",
+  "dgSpecHash": "wQQj9kbzkpc3jOoD3/uZmbB9LfIAtz6WlvskhYnwRSz1shW/u/nO1wBPc1r/amODF0jaDFn69KRTnmrdOMaapQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Brandon\\OneDrive\\Desktop\\Code\\CSharp\\SocketCommunication\\ClassChatClient\\ClassChatClient.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Brandon\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.11\\microsoft.netcore.app.ref.6.0.11.nupkg.sha512",
+    "C:\\Users\\Brandon\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.11\\microsoft.windowsdesktop.app.ref.6.0.11.nupkg.sha512",
+    "C:\\Users\\Brandon\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.11\\microsoft.aspnetcore.app.ref.6.0.11.nupkg.sha512",
+    "C:\\Users\\Brandon\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.11\\microsoft.netcore.app.host.win-x64.6.0.11.nupkg.sha512"
+  ],
   "logs": []
 }

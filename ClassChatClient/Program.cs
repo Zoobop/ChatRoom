@@ -8,7 +8,7 @@ while (true)
 
     if (!string.IsNullOrEmpty(username))
     {
-        using var client = new ClassChatClient(ClassChatApplication.DefaultPort);
+        var client = new ClassChatClient(ClassChatApplication.DefaultPort);
         client.Register(username);
         break;
     }
