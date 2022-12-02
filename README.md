@@ -40,4 +40,4 @@ After successfully running a server and a client, the result would be the follow
 
 ![Example](SetupImages/Example.png)
 
-_Note: For the client-side, it will ask for a username first before display the above interface. This exmaple's client username was 'Brandon'._
+_Note: For the client-side, it will ask for a username first before display the above interface. This example's client username was 'Brandon'._
